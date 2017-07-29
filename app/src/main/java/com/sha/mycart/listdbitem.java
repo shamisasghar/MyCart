@@ -21,7 +21,7 @@ import java.util.List;
 
 public class listdbitem extends Activity {
 
-    Button show;
+    Button sho;
     Db database;
     RecyclerView recyclerView;
     RecycleAdapter recycler;
@@ -31,12 +31,12 @@ public class listdbitem extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        // setContentView(R.layout.view);
-        show = (Button) findViewById(R.id.view);
+        sho = (Button) findViewById(R.id.view);
         dm =new ArrayList<datamodel>();
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView3);
 
 
-        show.setOnClickListener(new View.OnClickListener() {
+        sho.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 database = new Db(listdbitem.this);

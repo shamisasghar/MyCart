@@ -36,7 +36,7 @@ public class Db extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE+" ;");
     }
-    public void insertdata(String fname,String lname ){
+    public void insertdata(String fname, String lname){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues= new ContentValues();
 

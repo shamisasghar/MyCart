@@ -8,7 +8,6 @@ public class datamodel {
 
     public String fname;
     public String lname;
-    public String city;
 
     public String getFName() {
         return fname;

@@ -7,12 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.sha.mycart.Model.Db;
 import com.sha.mycart.Model.SqliteDb;
 
 public class ForthActivity extends AppCompatActivity {
 
     Button submit,show;
-SqliteDb sqliteDb;
+Db sqliteDb;
     EditText fname,lname;
     String fn,ln ;
     @Override
@@ -25,21 +26,23 @@ SqliteDb sqliteDb;
         submit=(Button)findViewById(R.id.submit);
         show=(Button)findViewById(R.id.show);
 
-sqliteDb =new SqliteDb(this,"",null,1);
+        sqliteDb =new Db(this);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 fn=fname.getText().toString();
                 ln=lname.getText().toString();
 
-                sqliteDb.insert_data(fn,ln);
+                sqliteDb.insertdata(fn,ln);
                 fname.setText("");
                 lname.setText("");
+                Intent intent = new Intent(ForthActivity.this,listdbitem.class);
+                startActivity(intent);
             }
         });
-show.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
+        show.setOnClickListener(new View.OnClickListener() {
+        @Override
+         public void onClick(View v) {
         Intent intent=new Intent(ForthActivity.this,listdbitem.class);
         startActivity(intent);
 
