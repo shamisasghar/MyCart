@@ -22,7 +22,7 @@ public class CartSession {
 
     private static final String PREF_NAME = "CartSessionPref";
 
-    public static final String CartDetail="";
+    public static final String CartDetail="Name";
 
 
     public CartSession(Context context){
