@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.sha.mycart.Model.datamodel;
+import com.sha.mycart.Model.Contact;
 
 import java.util.List;
 
@@ -15,9 +15,9 @@ import java.util.List;
  */
 
 public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.Myholder> {
-    List<datamodel> dataModelArrayList;
+    List<Contact> dataModelArrayList;
 
-    public RecycleAdapter(List<datamodel> dataModelArrayList) {
+    public RecycleAdapter(List<Contact> dataModelArrayList) {
         this.dataModelArrayList = dataModelArrayList;
     }
     class Myholder extends RecyclerView.ViewHolder {
@@ -37,9 +37,9 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.Myholder
     }
     @Override
     public void onBindViewHolder(Myholder holder, int position) {
-        datamodel dm=dataModelArrayList.get(position);
-        holder.fname.setText(dm.getFName());
-        holder.lname.setText(dm.getLName());
+        Contact dm=dataModelArrayList.get(position);
+        holder.fname.setText(dm.get_fname());
+        holder.lname.setText(dm.get_lname());
 
     }
 
