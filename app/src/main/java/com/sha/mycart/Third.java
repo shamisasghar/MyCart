@@ -26,8 +26,6 @@ public class Third extends AppCompatActivity {
         ed2=(EditText)findViewById(R.id.ln);
         textView=(TextView)findViewById(R.id.textView);
 
-
-
     }
     public void btn_click(View view)
     {

@@ -43,10 +43,10 @@ public class SqliteDb extends SQLiteOpenHelper
     }
 
     public void delete_data(String fn)
-    {
+{
 
-        this.getWritableDatabase().delete("Data","FirstName='"+fn+"'",null);
-    }
+    this.getWritableDatabase().delete("Data","FirstName='"+fn+"'",null);
+}
 
     public void update_data(String od,String nw)
     {

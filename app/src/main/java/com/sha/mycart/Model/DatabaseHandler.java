@@ -57,7 +57,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // Adding new contact
     public void addContact(Contact contact) {
         SQLiteDatabase db = this.getWritableDatabase();
-
         ContentValues values = new ContentValues();
         values.put(KEY_FNAME, contact.get_fname());
         values.put(KEY_LNAME, contact.get_lname());
@@ -111,7 +110,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // Updating single contact
     public int updateContact(Contact contact) {
         SQLiteDatabase db = this.getWritableDatabase();
-
         ContentValues values = new ContentValues();
         values.put(KEY_FNAME, contact.get_fname());
         values.put(KEY_LNAME, contact.get_lname());
@@ -139,6 +137,22 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         // return count
         return cursor.getCount();
+    }
+  public boolean update(String id,String fname,String lname)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_ID,id);
+        values.put(KEY_FNAME,fname);
+        values.put(KEY_LNAME,lname);
+        db.update(TABLE_CONTACTS,values,"ID=?",new String[]{id});
+        return true;
+    }
+
+    public Integer delete_data(String id)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+      return   db.delete(TABLE_CONTACTS,"ID= ?",new String[]{id});
     }
 
 

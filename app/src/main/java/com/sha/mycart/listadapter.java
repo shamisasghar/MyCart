@@ -73,7 +73,6 @@ public class listadapter extends RecyclerView.Adapter<listadapter.ViewHolder> {
             }
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
             @Override
             public void afterTextChanged(Editable s) {
@@ -83,7 +82,6 @@ public class listadapter extends RecyclerView.Adapter<listadapter.ViewHolder> {
                 cartSession.createCartSession(items);
             }
         });
-
     }
 
     @Override
