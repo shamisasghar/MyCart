@@ -149,11 +149,5 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return true;
     }
 
-    public Integer delete_data(String id)
-    {
-        SQLiteDatabase db = this.getWritableDatabase();
-      return   db.delete(TABLE_CONTACTS,"ID= ?",new String[]{id});
-    }
-
 
 }

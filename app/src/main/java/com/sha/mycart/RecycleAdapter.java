@@ -21,7 +21,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.Myholder
         this.dataModelArrayList = dataModelArrayList;
     }
     class Myholder extends RecyclerView.ViewHolder {
-        TextView fname, lname,id;
+        TextView fname, lname;
 
         public Myholder(View itemView) {
             super(itemView);

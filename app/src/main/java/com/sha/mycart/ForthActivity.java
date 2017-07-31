@@ -20,7 +20,7 @@ import java.util.List;
 
 public class ForthActivity extends AppCompatActivity {
   //  DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-    Button submit,show,uptd,del;
+    Button submit,show,uptd;
     EditText fname,lname,etid;
     String fn,ln ;
 
@@ -31,11 +31,12 @@ public class ForthActivity extends AppCompatActivity {
 
         fname=(EditText)findViewById(R.id.fn);
         lname=(EditText)findViewById(R.id.ln);
-        etid=(EditText)findViewById(R.id.ID) ;
+      etid=(EditText)findViewById(R.id.ID) ;
         submit=(Button)findViewById(R.id.submit);
         show=(Button)findViewById(R.id.show);
         uptd=(Button)findViewById(R.id.upte);
-        del=(Button)findViewById(R.id.del);
+
+
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,15 +68,5 @@ public class ForthActivity extends AppCompatActivity {
             }
         });
 
-
-del.setOnClickListener(new View.OnClickListener() {
-    DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-    @Override
-    public void onClick(View v) {
-
-            db.delete_data(etid.getText().toString());
-        Toast.makeText(ForthActivity.this, "Record Deleted", Toast.LENGTH_SHORT).show();
-    }
-});
     }
 }

@@ -18,13 +18,13 @@
 
         </activity>
         <activity android:name=".ShowDatabaseActivity" />
-        <activity android:name=".rest.LogoActivity">
+        <activity android:name=".logoActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
