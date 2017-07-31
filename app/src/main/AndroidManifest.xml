@@ -14,18 +14,16 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Second" />
         <activity android:name=".Third" />
-        <activity android:name=".ForthActivity">
-
-        </activity>
+        <activity android:name=".ForthActivity"></activity>
         <activity android:name=".ShowDatabaseActivity" />
         <activity android:name=".logoActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SlidingActivity"></activity>
     </application>
 
 </manifest>
